@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import Weekday from "./WeekDays"
+
+const Foodplan = () => {
+    const [food, setFood] = useState("");
+    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+    console.log(food)
+
+    return weekdays.map(day => {
+        return <Weekday day={day} food={food} key={day} setFood={setFood} />
+    });
+};
 
 
-const [weekdays, setWeekdays] = useState('');
-const [food, setFood] = useState('');
 
-const weekdays = useState(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]);
-
-
-return weekday.map(day => {
-    return <Weekday day={day} food={foodnames} />
-});
+export default Foodplan;

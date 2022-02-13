@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { FoodSelect } from './WeekDays';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Foodplan from './FoodPlan';
 
 function App() {
   return (
     <Router>
-      <Route path="/food" component={FoodSelect} />
-      <Route exact path="/" component={FoodSelect} />
+      <Routes>
+        <Route path="/food" element={<Foodplan />} />
+        <Route exact path="/" element={<Foodplan />} />
+      </Routes>
     </Router>
   );
 }
